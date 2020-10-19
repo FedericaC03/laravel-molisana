@@ -165,14 +165,43 @@ foreach ($data as $prodotto) {
           justify-content: center;
         }
         nav li {
-          margin: 20px 0;
+          margin: 20px 0 0;
           font-size:30px;
           font-weight: bold;
-          padding: 20px;
+          padding: 30px 20px;
         }
         nav li:hover{
           background-color: #b3e5fc;
         }
+        main {
+          background-image: url("background.jpg");
+          height: 2000px;
+        }
+        .container {
+          height: 2000px;
+          width: 82%;
+          margin: auto;
+        }
+        .blocchiPasta {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .img-pasta {
+          height: 300px;
+          margin: 10px;
+        }
+        h2 {
+          font-size: 45px;
+          color: #20477D;
+          padding: 50px 0 20px 10px;
+        }
+        .container-footer {
+          width: 82%;
+          background-color: red;
+          margin: auto;
+        }
+
       </style>
     </head>
     <body>
@@ -189,7 +218,36 @@ foreach ($data as $prodotto) {
       </nav>
     </header>
     
-
-
+    <main>
+        <div class="container">
+          <h2>LE LUNGHE</h2> 
+          <div class="blocchiPasta">
+            <?php foreach ($lunga as $pastalunga): ?>
+            <img class="img-pasta" src="<?php echo $pastalunga["src"]; ?>" alt="pasta">
+            <?php endforeach ?>
+          </div>
+          <h2>LE CORTE</h2>
+          <div class="blocchiPasta">
+            <?php foreach ($corta as $pastacorta): ?>
+            <img class="img-pasta" src="<?php echo $pastacorta["src"]; ?>" alt="pasta">
+            <?php endforeach ?>
+          </div>
+          <h2>LE CORTISSIME</h2>
+          <div class="blocchiPasta">
+            <?php foreach ($cortissima as $pastacortissima): ?>
+            <img class="img-pasta" src="<?php echo $pastacortissima["src"]; ?>" alt="pasta">
+            <?php endforeach ?>
+          </div>
+        </div>
+    </main>
+    <footer>
+      <div class="container-footer">
+        <ul>
+          <li>logo</li>
+          <li>pastificio</li>
+          <li>collezione da chef</li>
+        </ul>
+      </div>
+    </footer>
     </body>
 </html>
