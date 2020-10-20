@@ -28,12 +28,11 @@ nav li:hover {
 }
 
 main {
-  height: 3000px;
+  background-image: url("/image/background.jpg");
 }
 
 .container {
-  height: 3000px;
-  width: 82%;
+  width: 83%;
   margin: auto;
 }
 
@@ -45,6 +44,45 @@ main {
 .img-pasta {
   height: 300px;
   margin: 10px;
+  transform-origin: 50% 50%;
+  transition: transform 1s, filter 0.5s ease-out;
+}
+
+.single-box {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.single-box:hover .overlay {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.img-pasta:hover {
+  transform: scale(1.5);
+  filter: opacity(50%);
+  filter: blur(20px);
+  transition: all 2s;
+}
+
+.titolo {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.icon {
+  width: 30px;
 }
 
 h2 {
