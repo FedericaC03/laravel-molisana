@@ -1,4 +1,4 @@
-<?php
+@php
        $data = '[
         {
           "src": "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-m.jpg",
@@ -138,7 +138,7 @@ foreach ($data as $prodotto) {
   }
 }
 
-?>
+@endphp
 
 <!DOCTYPE html>
 <html lang="en">
@@ -147,62 +147,8 @@ foreach ($data as $prodotto) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Molisana</title>
-      <link rel="stylesheet" href="../../public/css/app.css">
-      <style>
-        *{
-          box-sizing: border-box;
-          font-family: sans-serif;
-          padding: 0;
-          margin:0;
-        }
-        .logo {
-          text-align: center;
-          margin-top: 40px;
-        }
-        nav ul {
-          list-style: none;
-          display: flex;
-          justify-content: center;
-        }
-        nav li {
-          margin: 20px 0 0;
-          font-size:30px;
-          font-weight: bold;
-          padding: 30px 20px;
-        }
-        nav li:hover{
-          background-color: #b3e5fc;
-        }
-        main {
-          background-image: url("background.jpg");
-          height: 2000px;
-        }
-        .container {
-          height: 2000px;
-          width: 82%;
-          margin: auto;
-        }
-        .blocchiPasta {
-          display: flex;
-          flex-wrap: wrap;
-        }
-
-        .img-pasta {
-          height: 300px;
-          margin: 10px;
-        }
-        h2 {
-          font-size: 45px;
-          color: #20477D;
-          padding: 50px 0 20px 10px;
-        }
-        .container-footer {
-          width: 82%;
-          background-color: red;
-          margin: auto;
-        }
-
-      </style>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+   
     </head>
     <body>
     <header>
@@ -222,28 +168,29 @@ foreach ($data as $prodotto) {
         <div class="container">
           <h2>LE LUNGHE</h2> 
           <div class="blocchiPasta">
-            <?php foreach ($lunga as $pastalunga): ?>
-            <img class="img-pasta" src="<?php echo $pastalunga["src"]; ?>" alt="pasta">
-            <?php endforeach ?>
+            @foreach ($lunga as $pastalunga)
+                <img class="img-pasta" src="{{$pastalunga["src"]}}" alt="pasta">
+            @endforeach 
           </div>
           <h2>LE CORTE</h2>
           <div class="blocchiPasta">
-            <?php foreach ($corta as $pastacorta): ?>
-            <img class="img-pasta" src="<?php echo $pastacorta["src"]; ?>" alt="pasta">
-            <?php endforeach ?>
+            @foreach ($corta as $pastacorta)
+              <img class="img-pasta" src="{{$pastacorta["src"]}}" alt="pasta">
+            @endforeach 
           </div>
           <h2>LE CORTISSIME</h2>
           <div class="blocchiPasta">
-            <?php foreach ($cortissima as $pastacortissima): ?>
-            <img class="img-pasta" src="<?php echo $pastacortissima["src"]; ?>" alt="pasta">
-            <?php endforeach ?>
+            @foreach ($cortissima as $pastacortissima)
+                <img class="img-pasta" src="{{$pastacortissima["src"]}}" alt="pasta">
+            @endforeach 
           </div>
         </div>
     </main>
     <footer>
       <div class="container-footer">
         <ul>
-          <li>logo</li>
+          <li>        <img src="logomolisana.png" alt="logo">
+          </li>
           <li>pastificio</li>
           <li>collezione da chef</li>
         </ul>
