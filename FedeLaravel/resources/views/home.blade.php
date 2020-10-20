@@ -151,70 +151,49 @@ foreach ($data as $prodotto) {
    
     </head>
     <body>
-    <header>
-      <div class="logo">
-        <img src="{{url('image/logomolisana.png')}}" alt="logo">
-      </div>
-      <nav>
-        <ul>
-          <li> <a href=""></a> Home</li>
-          <li>Prodotti</li>
-          <li>News</li>
-        </ul>
-      </nav>
-    </header>
-    
-    <main>
-        <div class="container">
-          <h2>LE LUNGHE</h2> 
-          <div class="blocchiPasta">
+      @include('header');
+      <main class="main">
+          <div class="container">
+            <h2>LE LUNGHE</h2> 
+            <div class="blocchiPasta">
+                
+                @foreach ($lunga as $pastalunga)
+                  <div class="single-box">
+                      <img class="img-pasta" src="{{$pastalunga["src"]}}" alt="pasta">
+                      <div class="overlay">
+                      <h3 class="titolo">{{$pastalunga["titolo"]}}</h3>
+                      <img class="icon" src="{{url('image/icon.svg')}}" alt="">
+                      </div>
+                  </div>
+                @endforeach 
               
-              @foreach ($lunga as $pastalunga)
-                <div class="single-box">
-                    <img class="img-pasta" src="{{$pastalunga["src"]}}" alt="pasta">
-                    <div class="overlay">
-                    <h3 class="titolo">{{$pastalunga["titolo"]}}</h3>
-                    <img class="icon" src="{{url('image/icon.svg')}}" alt="">
-                    </div>
+            </div>
+            <h2>LE CORTE</h2>
+            <div class="blocchiPasta">
+              @foreach ($corta as $pastacorta)
+              <div class="single-box">
+                <img class="img-pasta" src="{{$pastacorta["src"]}}" alt="pasta">
+                <div class="overlay">
+                <h3 class="titolo">{{$pastacorta["titolo"]}}</h3>
+                <img class="icon" src="{{url('image/icon.svg')}}" alt="">
                 </div>
+            </div>            @endforeach 
+            </div>
+            <h2>LE CORTISSIME</h2>
+            <div class="blocchiPasta">
+              @foreach ($cortissima as $pastacortissima)
+              <div class="single-box">
+                <img class="img-pasta" src="{{$pastacortissima["src"]}}" alt="pasta">
+                <div class="overlay">
+                <h3 class="titolo">{{$pastacortissima["titolo"]}}</h3>
+                <img class="icon" src="{{url('image/icon.svg')}}" alt="">
+                </div>
+            </div>
               @endforeach 
-            
+            </div>
           </div>
-          <h2>LE CORTE</h2>
-          <div class="blocchiPasta">
-            @foreach ($corta as $pastacorta)
-            <div class="single-box">
-              <img class="img-pasta" src="{{$pastacorta["src"]}}" alt="pasta">
-              <div class="overlay">
-              <h3 class="titolo">{{$pastacorta["titolo"]}}</h3>
-              <img class="icon" src="{{url('image/icon.svg')}}" alt="">
-              </div>
-          </div>            @endforeach 
-          </div>
-          <h2>LE CORTISSIME</h2>
-          <div class="blocchiPasta">
-            @foreach ($cortissima as $pastacortissima)
-            <div class="single-box">
-              <img class="img-pasta" src="{{$pastacortissima["src"]}}" alt="pasta">
-              <div class="overlay">
-              <h3 class="titolo">{{$pastacortissima["titolo"]}}</h3>
-              <img class="icon" src="{{url('image/icon.svg')}}" alt="">
-              </div>
-          </div>
-            @endforeach 
-          </div>
-        </div>
-    </main>
-    <footer>
-      <div class="container-footer">
-        <ul>
-          <li>       
-             <img src="{{ asset('img/logomolisana.png') }}" alt="logo">
-          </li>
-          <li>pastificio</li>
-          <li>collezione da chef</li>
-        </ul>
-      </div>
-    </footer>
+      </main>
+      @include('footer');
+
     </body>
 </html>
