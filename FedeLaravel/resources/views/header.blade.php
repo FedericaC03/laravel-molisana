@@ -1,6 +1,6 @@
 <header>
     <div class="logo">
-      <img src="{{url('image/logomolisana.png')}}" alt="logo">
+      <img src="{{asset('image/logomolisana.png')}}" alt="logo">
     </div>
     <nav>
       <ul>
