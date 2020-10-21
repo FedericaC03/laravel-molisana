@@ -55,14 +55,12 @@
   .overlay {
       display:none;
       text-align: center;
-      width: 90%;
-      background:rgba(0,0,0,0.6);
-      height: 85%;
+      width: 96%;
+      background:rgba(0,0,0,0.5);
+      height: 97%;
       margin-top: 5px;
-
-
-
   }
+
   .single-box:hover .overlay{
       display: block;
       position: absolute;
@@ -70,6 +68,12 @@
       left: 50%;
       transform: translate(-50%, -50%);   
       padding: 50px; 
+  }
+
+  .single-box:hover {
+    transform-origin: 65% 75%;
+    transition: transform 1s, filter .5s ease-out;
+
   }
   
   .titolo {
