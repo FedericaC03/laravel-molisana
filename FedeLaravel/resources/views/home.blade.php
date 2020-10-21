@@ -29,7 +29,7 @@ foreach ($data as $key => $prodotto) {
    
     </head>
     <body>
-      @include('partials/header');
+      @include('partials/header')
       <main class="main">
           <div class="container">
             <h2>LE LUNGHE</h2> 

@@ -28,3 +28,8 @@ Route::get('/news', function () {
 Route::get('/prodotti', function () {
     return view('prodotti');
 });
+
+Route::get('/prodotto/show/{$key}', function ($key) {
+    $prodotto = config("pasta.$key");
+    return view('prodotto', ["prodotto" => $prodotto]);
+});
