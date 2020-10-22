@@ -185,11 +185,38 @@ footer a {
 
 .main-prodotto-page {
   background-color: #B8DAE4;
+  position: relative;
 }
 
 .main-prodotto-page .prodotto-page-descrizione {
   color: #1D4885;
   font-size: 30px;
   padding-bottom: 30px;
+}
+
+.main-prodotto-page .prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.main-prodotto-page .prev i {
+  font-size: 60px;
+  color: white;
+  background-color: #abd1dd;
+  padding: 10px 15px 10px 10px;
+}
+
+.main-prodotto-page .next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.main-prodotto-page .next i {
+  font-size: 60px;
+  color: white;
+  background-color: #abd1dd;
+  padding: 10px 10px 10px 15px;
 }
 

@@ -155,7 +155,7 @@
   }
 
 
-  // PRODOTTI CSS
+  // PRODOTTI PAGE
   .primoblocco {
     position: relative;
     display: flex;
@@ -175,10 +175,33 @@
   }
   .main-prodotto-page {
     background-color: #B8DAE4;
+    position: relative;
     .prodotto-page-descrizione {
      color: #1D4885;
      font-size: 30px;
-     padding-bottom: 30px;
+     padding-bottom: 30px;     
+    }
+    .prev {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      i {
+        font-size: 60px;
+        color: white;
+        background-color:#abd1dd;
+        padding: 10px 15px 10px 10px;
+      }
+    }
+    .next {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      i {
+        font-size: 60px;
+        color: white;
+        background-color:#abd1dd;
+        padding: 10px 10px 10px 15px;
+      }
     }
   }
 

@@ -37,12 +37,13 @@ Route::get('/prodotti', function () {
         $tipopasta[$prodotto["tipo"]][] = $prodotto;
     }
 
-        return view('prodotti', ["tipopasta" => $tipopasta]);
+        return view('prodotti', ["prodotto" => $data]);
 });
 
 
 
 Route::get('/prodotti/show/{id}', function ($id) {
     $prodotto = config("pasta.$id");
-    return view('prodotto', ["prodotto" => $prodotto]);
+
+    return view('prodotto', ["id" => $id], ["prodotto" => $prodotto]);
 });
