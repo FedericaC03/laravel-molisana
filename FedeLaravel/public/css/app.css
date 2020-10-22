@@ -28,7 +28,8 @@ nav li a {
   color: black;
 }
 
-nav li:hover {
+nav li:hover,
+nav li:active {
   background-color: #b3e5fc;
 }
 

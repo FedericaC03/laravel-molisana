@@ -25,7 +25,6 @@ Route::get('/news', function () {
     return view('news');
 });
 
-
 Route::get('/prodotti', function () {
 
     $data = config('pasta');
@@ -37,7 +36,7 @@ Route::get('/prodotti', function () {
         $tipopasta[$prodotto["tipo"]][] = $prodotto;
     }
 
-        return view('prodotti', ["prodotto" => $data]);
+        return view('prodotti', ["id" => $key], ["prodotto" => $prodotto]);
 });
 
 
@@ -47,3 +46,4 @@ Route::get('/prodotti/show/{id}', function ($id) {
 
     return view('prodotto', ["id" => $id], ["prodotto" => $prodotto]);
 });
+

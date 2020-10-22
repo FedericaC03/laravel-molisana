@@ -28,14 +28,14 @@
           </div>
         @if ($id > 0)
             <div class="prev">
-              <a href="{{$id -1}}">
+              <a href="prodotti/show/{{$id -1}}">
                 <i class="fas fa-angle-left"></i>
               </a>
               </div>
         @endif
         @if ($id < 12 - 1)
         <div class="next">
-        <a href="{{$id + 1}}">
+        <a href="prodotti/show/{{$id + 1}}">
           <i class="fas fa-angle-right"></i>
         </a>
         </div>
