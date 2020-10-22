@@ -34,6 +34,7 @@ nav li:hover {
 
 .main {
   background-image: url("/image/background.jpg");
+  padding-bottom: 50px;
 }
 
 .container {
@@ -101,6 +102,8 @@ h2 {
   font-size: 45px;
   color: #20477D;
   padding: 50px 0 20px 10px;
+  width: 100%;
+  text-transform: uppercase;
 }
 
 .container-footer {
@@ -157,5 +160,36 @@ footer a {
 .footer-bottom {
   background-image: url("/image/footer-montagne-bottom.jpg");
   height: 130px;
+}
+
+.primoblocco {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.primoblocco img {
+  width: 100%;
+}
+
+.primoblocco .prodotto-page-titolo {
+  position: absolute;
+  color: #002D73;
+  top: 40px;
+  font-size: 40px;
+}
+
+.prodotto-page-img {
+  width: 100%;
+}
+
+.main-prodotto-page {
+  background-color: #B8DAE4;
+}
+
+.main-prodotto-page .prodotto-page-descrizione {
+  color: #1D4885;
+  font-size: 30px;
+  padding-bottom: 30px;
 }
 

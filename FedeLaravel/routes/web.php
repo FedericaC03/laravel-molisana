@@ -25,11 +25,24 @@ Route::get('/news', function () {
     return view('news');
 });
 
+
 Route::get('/prodotti', function () {
-    return view('prodotti');
+
+    $data = config('pasta');
+
+    $tipopasta  = [];
+
+    foreach ($data as $key => $prodotto) {
+        $prodotto["id"] = $key;
+        $tipopasta[$prodotto["tipo"]][] = $prodotto;
+    }
+
+        return view('prodotti', ["tipopasta" => $tipopasta]);
 });
 
-Route::get('/prodotto/show/{$key}', function ($key) {
-    $prodotto = config("pasta.$key");
+
+
+Route::get('/prodotti/show/{id}', function ($id) {
+    $prodotto = config("pasta.$id");
     return view('prodotto', ["prodotto" => $prodotto]);
 });

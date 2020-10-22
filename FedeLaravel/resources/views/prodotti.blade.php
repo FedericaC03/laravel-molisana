@@ -1,3 +1,5 @@
+@dd($tipopasta)
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,8 +12,20 @@
     </head>
     <body>
       @include('partials/header')
-        <main>
-            CORPO DEL SITO
+        <main class="main-prodotto-page">
+          <div class="primoblocco">
+            <img src="{{$prodotto["src-h"]}}" alt="">
+            <h1 class="prodotto-page-titolo">{{$prodotto ["titolo"]}}</h1>
+          </div>
+          <img class="prodotto-page-img" src="{{$prodotto["src-p"]}}" alt="">
+
+          <div class="container">
+            <p class="prodotto-page-descrizione">
+              {!! $prodotto["descrizione"]!!}
+          </p>
+
+          </div>
+          
         </main>
         @include('partials/footer')
 
